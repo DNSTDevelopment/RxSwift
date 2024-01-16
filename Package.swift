@@ -59,7 +59,7 @@ let package = Package(
   ] as [[Product]]).flatMap { $0 },
   targets: ([
     [
-      .target(name: "RxSwift", dependencies: []),
+      .target(name: "RxSwift", dependencies: [],swiftSettings: [.unsafeFlags(["-enable-library-evolution"])]),
     ], 
     Target.rxCocoa(),
     Target.rxCocoaRuntime(),
