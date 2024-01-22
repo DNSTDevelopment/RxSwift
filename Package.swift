@@ -59,7 +59,8 @@ let package = Package(
   ] as [[Product]]).flatMap { $0 },
   targets: ([
     [
-      .target(name: "RxSwift", dependencies: [],swiftSettings: [.unsafeFlags(["-enable-library-evolution","-emit-module-interface"])]),
+      .target(name: "RxSwift", dependencies: []
+              ,swiftSettings: [.unsafeFlags(["-enable-library-evolution","-emit-module-interface"])]),
     ], 
     Target.rxCocoa(),
     Target.rxCocoaRuntime(),
